@@ -1,0 +1,164 @@
+{
+	"variables": [],
+	"info": {
+		"name": "AccountStatement",
+		"_postman_id": "3aba026a-d41a-de2f-1abd-ae438458aa65",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Transaction",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/account/transaction?accNo=0115987456",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"account",
+						"transaction"
+					],
+					"query": [
+						{
+							"key": "accNo",
+							"value": "0115987456",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"txnReference\":\"F12TY1009\",\n\t\"credit\":5000.00,\n\t\"txnDate\":\"03-12-2021\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "View Statement",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/account/statement?accNo=0115987456",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"account",
+						"statement"
+					],
+					"query": [
+						{
+							"key": "accNo",
+							"value": "0115987456",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "View Statement sort",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/account/statement/sort?accNo=11078960008&field=statementId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"account",
+						"statement",
+						"sort"
+					],
+					"query": [
+						{
+							"key": "accNo",
+							"value": "11078960008",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "field",
+							"value": "statementId",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "View Statement Pagination",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/account/statement/pagination?accNo=11078960009&pageSize=15&pageNo=0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"account",
+						"statement",
+						"pagination"
+					],
+					"query": [
+						{
+							"key": "accNo",
+							"value": "11078960009",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "pageSize",
+							"value": "15",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "pageNo",
+							"value": "0",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
