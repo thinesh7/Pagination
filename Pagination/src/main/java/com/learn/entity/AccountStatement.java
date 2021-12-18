@@ -15,10 +15,12 @@ import java.util.Date;
 @Entity
 @Table(name = "ACCOUNT_STMT")
 @JsonInclude(JsonInclude.Include.NON_DEFAULT)
+
 /*
     @JsonIgnoreProperties(ignoreUnknown=true) is applicable at deserialization of JSON to Java object (POJO) only.
     If your POJO does not contain certain properties that JSON does contain, they are ignored and no error is thrown
- */
+*/
+
 public class AccountStatement {
 
     @Id

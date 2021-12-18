@@ -12,10 +12,12 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
+
 /*
     @JsonInclude(Include.NON_EMPTY) is used at serialization of POJO to JSON and it says, skip POJO properties
     that are: null or what is considered empty are not to be included. Definition of emptiness is data type-specific.
- */
+*/
+ 
 public class AccountTransactionDTO {
 
     private Long statementId;
